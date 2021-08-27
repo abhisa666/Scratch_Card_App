@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Scratch_card</string>
+    <string name="formatted_time">%02d:%02d:%02d</string>
+</resources>
