@@ -345,7 +345,7 @@ class MainActivity : AppCompatActivity() {
         val savedDate = sharedPreferences.getString("TODAY_DATE_KEY", "")
         Log.i("DateChnage","savedDate $savedDate")
 
-        val todayDate = LocalDateTime.now().toString()
+        val todayDate = LocalDate.now().toString()
         Log.i("DateChnage","todayDate $todayDate")
 
         if(savedDate==""){
