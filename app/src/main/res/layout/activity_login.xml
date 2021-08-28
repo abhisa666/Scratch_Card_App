@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_whatsapp_image_2021_08_07_at_2_20_14_pm">
+    android:background="@drawable/splash_pic">
 
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="160dp"
-        android:text="Sign in with Google"
+        android:layout_marginBottom="72dp"
         android:drawableLeft="@drawable/ic_icons8_google"
+        android:text="Sign in with Google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -2,6 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_whatsapp_image_2021_08_07_at_2_20_14_pm">
+    android:background="@drawable/splash_pic">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
