@@ -166,7 +166,19 @@ class MainActivity : AppCompatActivity() {
             try{
                 intent = Intent(Intent.ACTION_SEND)
                 intent.setType("text/plain")
-                val text = "Share it"
+                val text = "\uD83D\uDC8E\uD83D\uDC8EScratch Card To Win Diamonds \uD83D\uDC8E\uD83D\uDC8E \n" +
+                        "✅  मार्केट में एकदम नया इसलिए एप्रोक्स 90% स्क्रैच कार्ड में better luck नही आ रहा\n" +
+                        "\n" +
+                        "✅ नो MLM, नो रेफरल\n" +
+                        " \n" +
+                        "✅ नो टास्क, नो आदर एप्प डाउनलोड\n" +
+                        "\n" +
+                        "✅  रोजाना एप्रोक्स 500 रु. कमाई,\n" +
+                        "\n" +
+                        "✅  पमेंट प्रूफ :  प्ले स्टोर पर दिए स्क्रीन शॉट देखें\n" +
+                        "\n" +
+                        " Download link\n" +
+                        "डाउनलोड करें अभी और डायमंड्स कमाएं \uD83D\uDC47\uD83C\uDFFB\uD83D\uDC47\uD83C\uDFFB\uD83D\uDCA5\uD83D\uDC8E"
 
                 val info = packageManeger.getPackageInfo(
                     "com.whatsapp",
@@ -179,6 +191,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }catch (e: PackageManager.NameNotFoundException){
                 Log.e("Whatsapp", "Whatsapp is not installed")
+                Toast.makeText(
+                    applicationContext,
+                    "Whatsapp is not installed",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
