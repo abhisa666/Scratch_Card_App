@@ -19,6 +19,8 @@ class LoginActivity : AppCompatActivity()  {
 
     private var RC_SIGN_IN = 100
 
+    var my = 11
+
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
