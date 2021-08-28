@@ -21,7 +21,7 @@ class RedeemActivity : AppCompatActivity() {
         // set on-click listener
         img.setOnClickListener {
             // your code to perform when the user clicks on the ImageView
-            Toast.makeText(this@RedeemActivity, "You clicked on ImageView.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@RedeemActivity, "पहली बार आपका बॅलेन्स 1000 Diamonds होने के बाद आप अपने बॅलेन्स को ट्रान्स्फर करवा सकते है ! और उसके बाद रोजाना बॅलेन्स ट्रान्स्फर करवा सकते है.", Toast.LENGTH_SHORT).show()
         }
     }
 //        binding.imgStar.setOnClickListener(

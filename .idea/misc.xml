@@ -8,7 +8,8 @@
         <entry key="app/src/main/res/drawable/ic_whatsapp_image_2021_08_07_at_2_20_14_pm.xml" value="0.27760416666666665" />
         <entry key="app/src/main/res/layout-v21/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_redeem.xml" value="0.12590579710144928" />
+        <entry key="app/src/main/res/layout/activity_redeem.xml" value="0.335" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17291666666666666" />
       </map>
     </option>
   </component>

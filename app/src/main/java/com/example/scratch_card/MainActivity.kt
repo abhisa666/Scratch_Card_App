@@ -136,7 +136,7 @@ class MainActivity : AppCompatActivity() {
 //            putInt("STARS_KEY",0)
 //        }.apply()
 
-        val numOfScratchesLeft = sharedPreferences.getInt("SCRATCHES_LEFT_KEY", 9)
+        val numOfScratchesLeft = sharedPreferences.getInt("SCRATCHES_LEFT_KEY", 10)
         binding.leftScratches?.text = numOfScratchesLeft.toString()
 
         if(binding.leftScratches?.text!="0"){
@@ -243,12 +243,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 Toast.makeText(
                     applicationContext,
-                    "You have won $starsWon stars",
+                    "You have won $starsWon Diamonds",
                     Toast.LENGTH_SHORT
                 ).show()
 //                scratchView?.isVisible = false
                 val stars: String = binding.numStar?.text.toString()
-                Log.i("Main", "Stars $stars")
+                Log.i("Main", "Diamonds $stars")
                 binding.numStar?.text = (stars.toInt() + starsWon).toString()
 
                 // Save the number of stars in the shared preferences
