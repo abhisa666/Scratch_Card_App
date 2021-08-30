@@ -122,9 +122,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.scratchMsg?.isVisible = false
 
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             checkDateChangeAndReset()
         }
+
 
         loadStars()
 
@@ -343,10 +345,10 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         
         val savedDate = sharedPreferences.getString("TODAY_DATE_KEY", "")
-        Log.i("DateChnage","savedDate $savedDate")
+        Log.i("DateChange","savedDate $savedDate")
 
         val todayDate = LocalDate.now().toString()
-        Log.i("DateChnage","todayDate $todayDate")
+        Log.i("DateChange","todayDate $todayDate")
 
         if(savedDate==""){
             val editor = sharedPreferences.edit()
@@ -355,7 +357,7 @@ class MainActivity : AppCompatActivity() {
             }.apply()
         }else{
             if(savedDate!=todayDate){
-                Log.i("DateChnage","Date change so the scratch reset to 10")
+                Log.i("DateChange","Date change so the scratch reset to 10")
                 val editor = sharedPreferences.edit()
                 editor.apply {
                     putInt("SCRATCHES_LEFT_KEY", 10)
