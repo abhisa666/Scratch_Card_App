@@ -28,15 +28,28 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/img_star"
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
-        android:id="@+id/img_star"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/redeem_pic"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/redeem_pic" />
+
+    <ImageView
+        android:id="@+id/img_pubg"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_star"
+        app:srcCompat="@drawable/pubg_pic" />
 
     <TextView
         android:layout_width="300dp"
@@ -47,10 +60,10 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_star"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintTop_toBottomOf="@+id/img_pubg"
+        app:layout_constraintVertical_bias="0.397" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

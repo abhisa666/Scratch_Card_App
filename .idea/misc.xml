@@ -4,11 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27760416666666665" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.259375" />
+        <entry key="app/src/main/res/drawable/ic_icons8_google.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1921875" />
         <entry key="app/src/main/res/drawable/ic_whatsapp_image_2021_08_07_at_2_20_14_pm.xml" value="0.27760416666666665" />
-        <entry key="app/src/main/res/layout-v21/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/shape.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout-v21/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_redeem.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/backgroudround.xml" value="0.24954710144927536" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17291666666666666" />
       </map>
     </option>

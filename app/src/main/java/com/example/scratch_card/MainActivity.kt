@@ -36,12 +36,12 @@ class MainActivity : AppCompatActivity() {
         // Initialize FB Ads
         AudienceNetworkAds.initialize(this)
 
-        AdSettings.addTestDevice("15159d6e-79e4-43ad-a705-be455442ee63")
+//        AdSettings.addTestDevice("15159d6e-79e4-43ad-a705-be455442ee63")
         AdSettings.setTestMode(true)
 
         adView = AdView(
             this@MainActivity,
-            "876504519629777_876506189629610",
+            "267438701874261_267441251874006",
             AdSize.BANNER_HEIGHT_50
         )
 
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         //////////
 
-        interstitialAd = InterstitialAd(this, "876504519629777_876530459627183")
+        interstitialAd = InterstitialAd(this, "267438701874261_267440925207372")
 
         // Create listeners for the Interstitial Ad
         // Create listeners for the Interstitial Ad
@@ -127,6 +127,8 @@ class MainActivity : AppCompatActivity() {
             checkDateChangeAndReset()
         }
 
+        //Hiding the toast
+        binding.toast?.isVisible = false
 
         loadStars()
 
@@ -260,11 +262,30 @@ class MainActivity : AppCompatActivity() {
                 if(starsWon==0){
                     starsWon = Random.nextInt(20)
                 }
-                Toast.makeText(
-                    applicationContext,
-                    "You have won $starsWon Diamonds",
-                    Toast.LENGTH_SHORT
-                ).show()
+
+                // Make Toast
+                binding.toastMsg?.text = "You have won $starsWon Diamonds"
+                binding.toast?.isVisible = true
+//                Timer().schedule(object : TimerTask() {
+//                    override fun run() {
+//                        binding.toast?.isVisible = false
+//                    }
+//                }, 1000)
+
+                Timer().schedule(object : TimerTask() {
+                    override fun run() {
+                        this@MainActivity.runOnUiThread(Runnable {
+                            binding.toast?.isVisible = false
+                        })
+                    }
+                }, 2000)
+
+//                Toast.makeText(
+//                    applicationContext,
+//                    "You have won $starsWon Diamonds",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+
 //                scratchView?.isVisible = false
                 val stars: String = binding.numStar?.text.toString()
                 Log.i("Main", "Diamonds $stars")
@@ -372,58 +393,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-
-
-
-
-
-
-
-//    @RequiresApi(Build.VERSION_CODES.KITKAT)
-//    private fun startTimer(){
-//        // Start Timer
-//
-//        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-//        val editor = sharedPreferences.edit()
-//        editor.apply {
-//            putBoolean("TIMER_KEY",true)
-//        }.apply()
-//
-//        countDownTimer.start()
-//        binding.imgStar1?.isVisible = false
-//        binding.scratchView1?.isVisible= false
-//        binding.starTimer?.isVisible = true
-//
-//    }
-//
-//    private var countDownTimer = object: CountDownTimer(1000*70,1000){
-//        override fun onTick(millisUntilFinished: Long) {
-//            binding.starTimer?.text  = getString(R.string.formatted_time,
-//            TimeUnit.MILLISECONDS.toHours(millisUntilFinished)%12,
-//                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)%60,
-//                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)%60
-//                    )
-//        }
-//
-//        @RequiresApi(Build.VERSION_CODES.KITKAT)
-//        override fun onFinish() {
-//
-//            val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-//            val editor = sharedPreferences.edit()
-//            editor.apply {
-//                putBoolean("TIMER_KEY",false)
-//            }.apply()
-//
-//            binding.starTimer?.isVisible = false
-//            binding.starTimer?.text = "12:00:00"
-//            binding.imgStar1.isVisible = true
-//            binding.scratchView1.isVisible= true
-//            createScratchCard()
-//        }
-//
-//    }
-
 
 }
 

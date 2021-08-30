@@ -185,6 +185,37 @@
         app:layout_constraintTop_toBottomOf="@+id/img_star1" />
 
     <LinearLayout
+        android:id="@+id/toast"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button_rdm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_shr">
+
+        <TextView
+            android:id="@+id/toastMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="You have won "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/diamond_scratch" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/banner_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
